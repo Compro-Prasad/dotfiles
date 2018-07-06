@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if which emacs 2> /dev/null; then
-    if test -e "/tmp/emacs1000/server" || test -e ~/.emacs.d/server; then
+    if test -e "/tmp/emacs1000/server" || test -e ~/.emacs.d/server/server; then
         emacsclient -c "$@"
     else
         emacs --eval="(server-start)" "$@"
