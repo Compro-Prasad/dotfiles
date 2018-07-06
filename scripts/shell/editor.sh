@@ -1,10 +1,10 @@
 #!/bin/sh
 
 if which emacs 2> /dev/null; then
-    if test -e "/tmp/emacs1000/server" || test -e "~/.emacs.d/server"; then
-	emacsclient -c "$@"
+    if test -e "/tmp/emacs1000/server" || test -e ~/.emacs.d/server; then
+        emacsclient -c "$@"
     else
-	emacs --eval="(server-start)" "$@"
+        emacs --eval="(server-start)" "$@"
     fi
 elif which vim 2> /dev/null; then
     vim "$@"
