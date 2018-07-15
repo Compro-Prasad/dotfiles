@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if which emacs 2> /dev/null; then
-    if test -e "/tmp/emacs1000/server" || test -e ~/.emacs.d/server/server; then
-        emacsclient -c "$@"
-    else
+    if ! ( emacsclient -c "$@" 2> /dev/null ); then
+        echo "Couldn't start emacsclient"
+        echo "Starting Emacs..."
         emacs --eval="(server-start)" "$@"
     fi
 elif which vim 2> /dev/null; then
