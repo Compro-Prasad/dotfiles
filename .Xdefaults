@@ -1,0 +1,6 @@
+URxvt.background:      [90]#883
+URxvt.foreground:      [90]#8ff
+URxvt.intensityStyles: false
+URxvt.font:            xft:monospace:size=11
+URxvt.scrollBar:       false
+URxvt.cursorColor:     #2ff
