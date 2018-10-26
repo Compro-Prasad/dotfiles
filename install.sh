@@ -3,6 +3,7 @@
 run_dir=$(pwd)
 dotfiles=(
     Xdefaults
+    zshrc
 )
 
 for dotfile in "${dotfiles[@]}"; do
